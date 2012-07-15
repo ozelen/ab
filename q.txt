@@ -1,0 +1,30 @@
+/*
+truncate table Taxonomy
+
+insert into `Taxonomy` (node, uname, objid, type)
+	select 0, uname, id, 'GeoCountries' from `GeoCountries`
+;
+
+
+insert into `Taxonomy` (node, uname, objid, type)
+	select tx.`id`, adm.uname, adm.id, 'GeoAdminCodes' 
+	    from `GeoAdminCodes` adm 
+        join `GeoCountries` ctr 
+        	on adm.`country_code` = ctr.`ISO` 
+        join `Taxonomy` tx 
+        	on tx.`type` = 'GeoCountries' 
+            and tx.`objid` = ctr.id
+    where adm.`type` = 'adm1'
+;
+*/
+
+--insert into `Taxonomy` (node, uname, objid, type)
+	select tx.`id`, child.uname, child.id, 'GeoAdminCodes' 
+	    from `GeoAdminCodes` child 
+        join `GeoAdminCodes` parent 
+        	on parent.`admin1_code` = child.`admin1_code` and parent.`type` = 'adm1'
+        join `Taxonomy` tx 
+        	on tx.`type` = 'GeoAdminCodes' 
+            and tx.`objid` = parent.id
+    where child.`type` = 'adm2'
+;

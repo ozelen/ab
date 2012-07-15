@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<Links>
+	<Link>
+		<LinkID>OI406915</LinkID>
+		<PostID>0</PostID>
+		<URL>http://www.fxcm.co.uk/account-information.jsp</URL>
+		<Text>forex trading</Text>
+		<BeforeText> </BeforeText>
+		<AfterText> </AfterText>
+	</Link>
+	<Link>
+		<LinkID>OI669318</LinkID>
+		<PostID>0</PostID>
+		<URL>http://www.insurance-guide.co.za</URL>
+		<Text>Insurance Guide</Text>
+		<BeforeText> </BeforeText>
+		<AfterText> </AfterText>
+	</Link>
+	<Link>
+		<LinkID>OI669333</LinkID>
+		<PostID>0</PostID>
+		<URL>http://www.famousinsurance.com.au/page/your-bike/motorcycle-insurance</URL>
+		<Text>Motorbike insurance</Text>
+		<BeforeText> </BeforeText>
+		<AfterText> </AfterText>
+	</Link>
+</Links>
