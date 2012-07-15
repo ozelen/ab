@@ -183,7 +183,7 @@ class Settings{
 	
 	function setHomePageId(){
 		
-		$arr = split("\.", $this->Domain);
+		$arr = explode("\.", $this->Domain);
 		$sub=array();
 		//$dom = join("[", $arr);
 		foreach($arr as $e){
@@ -360,9 +360,9 @@ $RSI = new rsi();
 
 
 function q($q){global $caCFG; return $caCFG->DB->q($q);}
-function fetchObj($res){return mysql_fetch_object(&$res);}
-function fetchArr($res){return mysql_fetch_array(&$res);}
-function fetch($res){return fetchObj(&$res);}
+function fetchObj($res){return mysql_fetch_object($res);}
+function fetchArr($res){return mysql_fetch_array($res);}
+function fetch($res){return fetchObj($res);}
 function fq($q){return fetchObj(q($q));}
 
 
